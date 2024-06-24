@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -49,7 +51,7 @@ body {
     font-size: 1rem;
     color: var(--text-color);
     font-weight: 150;
-    max-height: 78px; /* Atur tinggi maksimum gambar */
+    max-height: 60px; /* Atur tinggi maksimum gambar */
     width: auto; /* Menjaga aspek rasio gambar */
 }
 
@@ -158,6 +160,20 @@ section {
 .content h1 {
     font-size: 10rem;
     color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.content h2 {
+    font-size: 1.8rem;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.content h3 {
+    
+    font-family: 'Montserrat',sans-serif;
+    color: var(--text-color);
+    font-weight: 400;
     margin-bottom: 2.5rem;
 }
 
@@ -218,4 +234,70 @@ section {
 
 .btn:hover::before {
     width: 100%;
+}
+
+
+.aboutwe{
+    position: relative;
+    background: url(gambar/tentangkami.png) no-repeat;
+    background-size: cover;
+    padding: 6rem;
+    overflow-x: hidden;
+  
+
+}
+
+.title h1{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+
+
+}
+
+.content-about h2 {
+  position: relative;
+  text-align: center;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
+  padding: 20rem;
+  font-size: 2.3rem;
+  
+}
+.visimisi {
+    position: relative;
+    background: url(gambar/visismisi.png) no-repeat;
+    background-size: cover;
+    padding: 5rem;
+    overflow-x: hidden;
+}
+
+.content-visimisi{
+    position: relative;
+    padding: 8rem;
+}
+.content-visimisi h1 {
+    position: relative;
+    font-size: 3rem;
+    font-family: 'Montserrat',sans-serif;
+    padding-bottom: 1.5rem;
+
+}
+.content-visimisi h2 {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Montserrat',sans-serif;
+    padding-bottom: 1rem;
+
+}
+.misi li{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Montserrat',sans-serif;
+    padding-bottom: 0.5rem;
 }
