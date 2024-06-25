@@ -667,15 +667,11 @@ section {
         padding: 5px;
     }
     .footer{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        padding: 1rem 9%;
-        background: var(--second-bg-color);
+        flex-direction: column-reverse;
     
     }
     .footer-text p {
+        margin-top: 2rem;
         font-size: 1rem;
     }
     
