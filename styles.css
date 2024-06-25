@@ -80,6 +80,25 @@ body {
     display: none;
 }
 
+.header.active .navbar {
+    display: flex;
+}
+
+.navbar.active {
+    display: flex;
+    flex-direction: column;
+    background: var(--second-bg-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.navbar a {
+    
+    text-align: center;
+}
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -144,7 +163,7 @@ section {
     font-size: 2rem;
     padding: 20px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .navigation .prev:hover, .navigation .next:hover {
@@ -243,7 +262,7 @@ section {
     background-size: cover;
     padding: 6rem;
     overflow-x: hidden;
-  
+    
 
 }
 
@@ -256,17 +275,75 @@ section {
 
 
 }
+.title-visi h1{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+}
 
 .content-about h2 {
   position: relative;
   text-align: center;
   font-family: 'Montserrat',sans-serif;
-  font-weight: 400;
+  font-weight: 450;
   color: var(--text-color);
-  padding: 20rem;
+  padding-top: 18rem;
+  padding-bottom: 5rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
   font-size: 2.3rem;
   
 }
+
+.home-sci {
+    position: relative;
+    bottom: 4rem;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 5rem;
+}
+.home-sci a {
+    position: relative;
+    display: inline flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: var(--bg-color);
+}
+.home-sci a::before  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+
+
 .visimisi {
     position: relative;
     background: url(gambar/visismisi.png) no-repeat;
@@ -425,4 +502,194 @@ section {
 }
 .footer-iconTop a:hover i{
     color: var(--main-color);
+}
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--second-bg-color);
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        padding: 10px 20px;
+    }
+
+    .header.active .navbar {
+        display: flex;
+    }
+
+    .home, .aboutwe, .visimisi, .Kegiatan {
+        padding: 20px 10px;
+    }
+
+    .visimisi .content-visimisi ul {
+        text-align: left;
+    }
+    .slide {
+        height: 150vh; /* Sesuaikan tinggi slide */
+    }
+
+    .slide img {
+        width: auto; /* Lebar gambar mengisi seluruh lebar parent (slider) */
+        height: auto; /* Tinggi gambar menyesuaikan proporsional sesuai lebar */
+        object-position: center;
+        max-width: 125%; /* Mencegah gambar melebihi lebar parent jika lebih besar */
+        max-height: 125%; /* Mencegah gambar melebihi tinggi parent jika lebih besar */
+    }
+
+    .navigation .prev, .navigation .next {
+        font-size: 1.5rem; /* Sesuaikan ukuran tombol navigasi */
+        padding: 10px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .home .content h1 {
+        font-size: 24px;
+    }
+
+    .home .content h2 {
+        font-size: 20px;
+    }
+
+    .home .content h3 {
+        font-size: 16px;
+    }
+
+    .aboutwe ,
+    .visimisi .content-visimisi h2,
+    .Kegiatan .carousel-item h4 {
+        font-size: 16px;
+    }
+
+    .content-about h2 {
+        position: relative;
+        text-align: center;
+        font-family: 'Montserrat',sans-serif;
+        font-weight: 450;
+        color: var(--text-color);
+        padding-top: 5rem;
+        padding-bottom: 5rem;   
+        font-size: 12px;
+        
+      }
+      .title-visi h1{
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    
+    }
+      .slide {
+        height: 150vh; /* Sesuaikan tinggi slide untuk layar lebih kecil */
+        
+    }
+
+    .slide img {
+        width: auto; /* Lebar gambar mengisi seluruh lebar parent (slider) */
+        height: auto; /* Tinggi gambar menyesuaikan proporsional sesuai lebar */
+        object-position: center;
+        max-width: 125%; /* Mencegah gambar melebihi lebar parent jika lebih besar */
+        max-height: 125%; /* Mencegah gambar melebihi tinggi parent jika lebih besar */
+    }
+
+    .navigation .prev, .navigation .next {
+        font-size: 1.2rem; /* Sesuaikan ukuran tombol navigasi */
+        padding: 5px;
+    }
+    
+}
+@media (max-width: 390px) {
+    .home .content h1 {
+        font-size: 24px;
+    }
+
+    .home .content h2 {
+        font-size: 20px;
+    }
+
+    .home .content h3 {
+        font-size: 16px;
+    }
+
+    .aboutwe ,
+    .visimisi .content-visimisi h2,
+    .Kegiatan .carousel-item h4 {
+        font-size: 16px;
+    }
+
+    .content-about h2 {
+        position: relative;
+        text-align: center;
+        font-family: 'Montserrat',sans-serif;
+        font-weight: 450;
+        color: var(--text-color);
+        padding-top: 5rem;
+        padding-bottom: 5rem;   
+        font-size: 12px;
+        
+      }
+      .title-visi h1{
+        position: relative;
+        text-align: center;
+        font-size: 18px;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    
+    }
+      .slide {
+        height: 150vh; /* Sesuaikan tinggi slide untuk layar lebih kecil */
+        
+    }
+
+    .slide img {
+        width: auto; /* Lebar gambar mengisi seluruh lebar parent (slider) */
+        height: auto; /* Tinggi gambar menyesuaikan proporsional sesuai lebar */
+        object-position: center;
+        max-width: 125%; /* Mencegah gambar melebihi lebar parent jika lebih besar */
+        max-height: 125%; /* Mencegah gambar melebihi tinggi parent jika lebih besar */
+    }
+
+    .navigation .prev, .navigation .next {
+        font-size: 1.2rem; /* Sesuaikan ukuran tombol navigasi */
+        padding: 5px;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 1rem 9%;
+        background: var(--second-bg-color);
+    
+    }
+    .footer-text p {
+        font-size: 1rem;
+    }
+    
+    .footer-iconTop a {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem;
+        background: var(--main-color);
+        border: .2rem solid var(--main-color);
+        border-radius: .6rem;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
 }

@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', showNextSlide);
     prevBtn.addEventListener('click', showPrevSlide);
 
+    // Menu burger functionality
     menuIcon.addEventListener('click', () => {
+        menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
     });
 
@@ -60,6 +62,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', () => {
         header.classList.toggle('sticky', window.scrollY > 0);
         updateActiveLink();
+
+        // Remove menu burger active state on scroll
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
     });
 
     let currentCarouselIndex = 0;
@@ -95,4 +101,9 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSlidePosition();
     updateCarouselPosition();
     updateActiveLink();
+
+    // Update slider on window resize
+    window.addEventListener('resize', () => {
+        updateSlidePosition();
+    });
 });
