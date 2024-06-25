@@ -609,6 +609,14 @@ section {
         font-size: 1.2rem; /* Sesuaikan ukuran tombol navigasi */
         padding: 5px;
     }
+    .footer{
+        flex-direction: column-reverse;
+    
+    }
+    .footer-text p {
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
     
 }
 @media (max-width: 390px) {
