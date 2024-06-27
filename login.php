@@ -20,17 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         header("Location: index.php");
     } else {
-        $error = "Username or password is incorrect.";
+        $error = "Username atau password salah.";
     }
 }
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - User</title>
+    <title>Login - Pengguna</title>
     <link rel="stylesheet" href="styles2.css">
 </head>
 <body>
@@ -43,10 +43,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Login</button>
         </form>
         <div class="create-account">
-            <a href="#">Create Account</a>
+            <a href="#">Buat Akun</a>
         </div>
         <div class="help">
-            <a href="#">Need Help?</a>
+            <a href="#">Butuh Bantuan?</a>
         </div>
     </div>
 </body>
